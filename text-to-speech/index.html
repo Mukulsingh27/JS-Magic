@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Text to Speech</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" async></script>
+	</head>
+	<body>
+		<div class="card">
+			<h1>Voiceinator 1.0</h1>
+			<p>
+				Select the rate and pitch of the voice and enter the text you
+				want us to speak.
+			</p>
+			<select name="voice" id="voices">
+				<option value="">Select a Voice</option>
+			</select>
+			<div class="range">
+				<label for="rate">Rate</label>
+				<input
+					name="rate"
+					type="range"
+					min="0"
+					max="3"
+					step="0.1"
+					value="1"
+				/>
+				<span>1</span>
+			</div>
+			<div class="range">
+				<label for="pitch">Pitch</label>
+				<input name="pitch" type="range" min="0" max="2" step="0.1" />
+				<span>2</span>
+			</div>
+
+			<div class="textarea-box">
+				<textarea
+					name="text"
+					id="text"
+					cols="30"
+					rows="10"
+					placeholder="Enter your text here..."
+				></textarea>
+			</div>
+
+			<div class="buttons">
+				<button id="speak">Speak</button>
+				<button id="stop">Stop</button>
+			</div>
+		</div>
+	</body>
+</html>
